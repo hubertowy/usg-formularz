@@ -1,6 +1,8 @@
 # Formularz opisów USG weterynaryjnego
 
-Strona statyczna, bez instalacji zależności i bez serwera aplikacji.
+[Otwórz formularz USG](https://hubertowy.github.io/usg-formularz/)
+
+Strona statyczna, bez instalacji zależności i bez serwera aplikacji. Ciemnozielony interfejs, tryb skupienia oraz widok wszystkich narządów. Pomiary wpisuje się bezpośrednio w zdaniach. Formularz sprawdza wybrane sprzeczne cechy oraz dodane zmiany przed skopiowaniem opisu; nie interpretuje automatycznie dowolnego tekstu własnego.
 
 ## Otwieranie lokalne
 Pobierz pliki i otwórz index.html w przeglądarce. Wszystkie cztery pliki muszą pozostać w tym samym katalogu.
