@@ -1,3 +1,18 @@
+# Gałąź robocza: wybór badania USG
+
+Ta wersja rozwija formularz na gałęzi `codex/wybor-badania-usg`. Publiczna strona GitHub Pages nadal korzysta z `main`.
+
+Ekran startowy pozwala wybrać:
+- USG jamy brzusznej: dotychczasowe 17 struktur (z układem rozrodczym dobranym do płci).
+- USG układu moczowego: pęcherz moczowy oraz nerki lewa i prawa.
+- USG układu pokarmowego: wątroba, pęcherzyk żółciowy i drogi żółciowe, śledziona, trzustka, żołądek, dwunastnica, jelito czcze, jelito biodrowe, okrężnica, węzły chłonne, jama otrzewnej.
+
+Zmiana zakresu przez „Wybór badania” zachowuje wpisane dane w ramach tej samej sesji. „Nowe badanie” usuwa dane po potwierdzeniu i wraca do ekranu wyboru. Kopiowany raport obejmuje tylko wybrany zakres.
+
+W tej gałęzi są także oznaczenia stanu narządów i przycisk „Opróżniony · ocena ograniczona” przy pęcherzu.
+
+---
+
 # Formularz opisów USG weterynaryjnego
 
 [Otwórz formularz USG](https://hubertowy.github.io/usg-formularz/)
