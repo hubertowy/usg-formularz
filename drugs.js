@@ -15,14 +15,19 @@ entries.push({id:'rapidexon-2',name:'Rapidexon',library:'vet',kind:'injection',s
 entries.push(...(window.ExtraDrugs||[]));
 entries.push(...[20,60,100].map(mg=>({id:'galliprant-'+mg,name:'Galliprant',kind:'tabletBands',library:'vet',species:['dog'],strength:mg+' mg',mg,substance:'grapiprant',checked:'14.10.2026',source:'https://www.uskvbl.cz/attachments/spc/0910f7c7806dc93d.pdf',bands:mg===20?[[3.6,6.8,.5],[6.9,13.6,1]]:mg===60?[[13.7,20.4,.5],[20.5,34,1]]:[[34.1,68,1],[68.1,100,2]],ageNotice:'Bezpieczeństwo nieustalone poniżej 9 miesięcy.',indications:'Ból związany z łagodną lub umiarkowaną osteoartrozą u psów.',notes:'Doustnie raz na dobę, na czczo, co najmniej godzinę przed posiłkiem. Dawka docelowa 2 mg/kg; liczba tabletek według przedziałów ChPLW. Tabletki 20 i 60 mg podzielne na połowy; 100 mg bez podziału. Bez poprawy po 14 dniach przerwać leczenie i ocenić inne możliwości.',cautions:'Nie stosować u ciężarnych, karmiących ani zwierząt hodowlanych. Unikać łączenia z innymi lekami przeciwzapalnymi. Ostrożność przy chorobach nerek, wątroby, serca i żołądka. Bezpieczeństwo nieustalone poniżej 9 miesięcy i 3,6 kg.'})));
 entries.push(...(window.VetSupplements||[]));
+entries.push(...(window.Ilovet?.entries||[]));
 entries.push(...(window.DermatologyDrugs||[]));
 entries.push(...(window.HumanDrugs||[]));
 entries.push(...(window.ThyroidDrugs||[]));
 entries.push(...(window.SteroidDrugs||[]));
 entries.push(...(window.AddedDrugs?.entries||[]));
 entries.push(...(window.ClinicalDrugs?.entries||[]));
+entries.push(...(window.ExpandedDrugs?.entries||[]));
 function parseWeight(raw){const s=String(raw).trim();if(!s)return {status:'empty'};if(!/^\d+(?:[.,]\d+)?$/.test(s))return {status:'invalid'};const kg=Number(s.replace(',','.'));return Number.isFinite(kg)&&kg>0?{status:'valid',kg}:{status:'invalid'};}
-function calculate(d,species,raw,schemeId,ageRaw){if(d.kind==='schemes')return calculateScheme(d,species,raw,schemeId,ageRaw);if(!d.species.includes(species))return {status:'species'};const p=parseWeight(raw);if(p.status!=='valid')return p;const kg=p.kg;
+function calculate(d,species,raw,schemeId,ageRaw){if(d.kind==='schemes')return calculateScheme(d,species,raw,schemeId,ageRaw);if(!d.species.includes(species))return {status:'species'};if(d.kind==='ilovet'&&d.topical)return window.Ilovet.calculate(d,null,species);
+const p=parseWeight(raw);if(p.status!=='valid')return p;const kg=p.kg;
+if(d.kind==='ilovet')return window.Ilovet.calculate(d,kg,species);
+if(d.kind==='expandedDose')return window.ExpandedDrugs.calculate(d,kg,species);
 if(d.kind==='clinicalDose')return window.ClinicalDrugs.calculate(d,kg,species,schemeId,ageRaw);
 if(d.kind==='labelDose')return window.AddedDrugs.calculate(d,kg,species,ageRaw);
 if(d.kind==='dailyTablets'){
@@ -37,10 +42,11 @@ if(d.kind==='initialTablets'){
  const doses=special?[make(50,'Raz na dobę','Pies poniżej 5 kg')]:d.name==='Forthyron'?[make(kg*10,'Co 12 godzin','Dawka początkowa')]:[make(kg*20,'Raz na dobę','Wariant 1 — jedno podanie'),make(kg*10,'2 razy dziennie','Wariant 2 — dwa równe podania')];
  if(!doses.every(v=>Number.isFinite(v.ug)))return {status:'invalid'};
  if(special&&d.ug!==200)doses[0].tablets=null;
- // Veterinarian-configured upward rounding proposal, separate from the label calculation.
+ // Keep each exact starting dose separate from its tablet proposal.
  const quarterCount=d.name==='Forthyron'&&!special?Math.ceil(doses[0].ug/d.ug*4-1e-10):null;
  const proposal=quarterCount!==null&&Number.isSafeInteger(quarterCount)&&quarterCount>0?{tablets:quarterCount/4,ug:quarterCount/4*d.ug,rounded:Math.abs(quarterCount/4*d.ug-doses[0].ug)>1e-8}:null;
- return {status:'initialTablets',kg,doses,special,proposal,dailyUg:special?50:kg*20,precisionNotice:d.tabletCautionBelow&&kg<d.tabletCautionBelow?`Dla mocy ${d.ug} µg ustalenie optymalnej dawki poniżej ${d.tabletCautionBelow} kg może być niemożliwe ze względu na podzielność tabletek.`:''};
+ const proposals=d.name==='Levogland'?doses.map(v=>{const tablets=Math.ceil(v.ug/d.ug*4-1e-10)/4;return {tablets,ug:tablets*d.ug,rounded:Math.abs(tablets*d.ug-v.ug)>1e-8,frequency:v.frequency,label:v.label};}):proposal?[{...proposal,frequency:doses[0].frequency,label:doses[0].label}]:[];
+ return {status:'initialTablets',kg,doses,special,proposal,proposals,dailyUg:special?50:kg*20,precisionNotice:d.tabletCautionBelow&&kg<d.tabletCautionBelow?`Dla mocy ${d.ug} µg ustalenie optymalnej dawki poniżej ${d.tabletCautionBelow} kg może być niemożliwe ze względu na podzielność tabletek.`:''};
 }
 if(d.kind==='humanTablets'){
  const mgRange=d.doseRange.map(rate=>kg*rate),tablets=mgRange.map(mg=>mg/d.mg);
@@ -103,11 +109,27 @@ function presentation(d,species){
 }
 const normalize=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ł/g,'l').toLowerCase();
 function search(query,library,species){const needle=normalize(query.trim());return entries.filter(d=>d.library===library&&(d.species.includes(species)||d.showUnavailable)&&normalize(`${d.name} ${d.name.replace(/ /g,'')} ${d.aliases||''} ${d.strength||''} ${d.substance} ${d.name==='Cladaxxa'?'amoxicillin clavulanic':''} ${d.kind==='injection'?'dexamethasone 2 mg/ml iniekcja':d.amoxicillin+'/'+d.clavulanic+' '+(d.amoxicillin+d.clavulanic)}`).includes(needle));}
+function matchingVariants(options,species,raw){
+ return options.filter(d=>{
+  const r=calculate(d,species,raw);
+  if(['table','tabletBands'].includes(r.status))return true;
+  if(r.status==='expandedDose')return r.unit==='tabl.'&&!r.tabletUnavailable;
+  if(r.status==='humanTablets')return !!r.quarters;
+  if(r.status==='dailyTablets')return !!r.quarters;
+  if(r.status==='labelDose')return r.form==='oralExact'&&r.doses.every(v=>v.tablets!==null);
+  if(r.status==='clinicalDose')return r.tablets!==null;
+  if(d.kind==='schemes'){
+   const plans=presentation(d,species);
+   return plans.length===1&&plans[0].items.every(item=>calculate(d,species,raw,item.schemeId,'adult').status==='scheme');
+  }
+  return false;
+ });
+}
 function recommendVariant(options,species,raw){
  if(!options.length||options.some(d=>!['Cladaxxa','Galliprant','Zenrelia','Apoquel','Numelvi'].includes(d.name)))return null;
  const candidates=options.map(d=>({d,r:calculate(d,species,raw)})).filter(x=>['table','tabletBands'].includes(x.r.status));
  candidates.sort((a,b)=>a.r.actualTotal-b.r.actualTotal||a.r.tablets-b.r.tablets);
  return candidates[0]?.d||null;
 }
-return {entries,parseWeight,calculate,search,recommendVariant,presentation};
+return {entries,parseWeight,calculate,search,recommendVariant,matchingVariants,presentation};
 })();

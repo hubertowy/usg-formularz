@@ -16,3 +16,8 @@ Kalkulator jest narzędziem pomocniczym. Schematy preparatów ludzkich są oznac
 
 ## Publikacja
 GitHub Pages: gałąź `main`, katalog główny. Plik `.nojekyll` umożliwia bezpośrednią publikację plików statycznych.
+
+
+## Źródła informacji o lekach
+
+Preferowane są polskie ChPLW i ulotki z Rejestru Produktów Leczniczych e-Zdrowie. Gdy brak odpowiedniego dokumentu, korzystamy z polskich dokumentów urzędowych UE lub oficjalnego producenta. Dokumenty obcojęzyczne służą jako źródło zapasowe; język jest oznaczony przy odnośniku. Każda dawka musi dotyczyć właściwej postaci, mocy i gatunku.

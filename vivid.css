@@ -51,3 +51,125 @@ body[data-panel=drugs]{--section-accent:#b64100;--section-soft:#fff0e5;--section
 /* Spójny akcent pól masy i wyszukiwania. */
 #vet-portal #vp-weight:focus,#vet-portal #vp-weight:focus-visible{outline:2px solid #aca5ff;outline-offset:2px;border-color:#bcb6e6;box-shadow:0 0 0 4px #aca5ff14}
 #vet-portal .vp-search-wrap>span{color:#7365b5}
+
+/* Ilovet instructions remain readable on narrow screens. */
+#vet-portal .vp-ilovet-table{width:100%;border-collapse:collapse;margin-top:12px;font-size:13px;text-align:left}
+#vet-portal .vp-ilovet-table th,#vet-portal .vp-ilovet-table td{padding:9px 6px;border-bottom:1px solid rgba(94,94,106,.16);vertical-align:top}
+#vet-portal .vp-ilovet-table th{font-weight:600}
+
+/* Match select focus to the search and weight fields. */
+#vet-portal .vp-scheme-label select:focus,#vet-portal .vp-scheme-label select:focus-visible{outline:2px solid #aca5ff;outline-offset:2px;border-color:#bcb6e6;box-shadow:0 0 0 4px #aca5ff14}
+
+/* Consistent inset chevrons, without an opaque background patch. */
+#vet-portal .vp-scheme-label select{appearance:none;-webkit-appearance:none;padding-right:44px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='m4 6 4 4 4-4' fill='none' stroke='%235e5e6a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-position:right 16px center;background-repeat:no-repeat;background-size:16px}
+.vp-option-dose{display:block}.vp-option-dose+.vp-option-dose{margin-top:8px}.vp-dose-option+.vp-dose-option{margin-top:20px;padding-top:18px;border-top:1px solid #d8d4e5}.vp-dose-option h4{margin:0 0 10px}.vp-calculator-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.vp-calculator-grid .vp-tile{min-height:280px;text-align:left}.vp-back{margin-bottom:28px;border:1px solid #d8d4e5;border-radius:12px;padding:10px 16px;background:#ffffff55;color:#5e5e6a;cursor:pointer}body[data-panel=fat],body[data-panel=fluid]{--section-accent:#087f73;--section-line:#b7ddd5;--section-soft:#e7f8f3}@media(max-width:650px){.vp-calculator-grid{grid-template-columns:1fr}}
+
+/* Shared glass tiles, with colour reserved for individual icons. */
+#vet-portal .vp-tile,#usg-focus .uf-exam-card{background:linear-gradient(135deg,#ffffff70,#ffffff25);border:1px solid #ffffffed;box-shadow:inset 0 1px #fff,0 12px 28px #3529bf08;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+#vet-portal .vp-tile:is(:hover,:focus-visible),#usg-focus .uf-exam-card:is(:hover,:focus-visible){background:linear-gradient(135deg,#ffffffa0,#ffffff50);box-shadow:inset 0 1px #fff,0 16px 32px #3529bf12}
+#vet-portal .vp-tile::before,#vet-portal .vp-tile::after{display:none}
+#vet-portal .vp-tile-bottom,#usg-focus .uf-exam-bottom{border-color:#d8d4e580;color:#5e5e6a}
+#usg-focus .uf-exam-kicker{color:#5e5e6a}
+.vp-blood{--tile:#d9798b;--tile-text:#b65266;--tile-bg:#fbe9ed}
+body[data-panel=blood]{--section-accent:#b65266;--section-line:#efd2db;--section-soft:#fceef2}
+#vp-blood{background:linear-gradient(130deg,#ffffff80,#f9e5ea55)}
+#vet-portal .vp-calculator-fat .vd-icon{background:#fff0e4;color:#b65c23;box-shadow:0 6px 16px #b65c2310}
+#vet-portal .vp-calculator-fluid .vd-icon{background:#e4f0ff;color:#377db5;box-shadow:0 6px 16px #377db510}
+.vp-calculator-grid .vd-icon{margin-bottom:22px;width:60px;height:60px}
+.vp-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.vp-brief-line{display:block;white-space:nowrap}.vp-brief-line+.vp-brief-line{margin-top:3px}
+.vp-quick{min-width:0}.vp-option-dose{margin-bottom:5px}
+@media(max-width:1100px){.vp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.vp-grid{grid-template-columns:1fr}.vp-brief-line{white-space:normal;text-wrap:balance}.vp-quick{overflow-wrap:normal}}
+
+/* Homepage keeps the four section colours; inner tiles stay neutral. */
+#vet-portal #vp-home .vp-tile{background:linear-gradient(145deg,#ffffffd9 15%,var(--tile-bg));border-color:color-mix(in srgb,var(--tile) 24%,#fff);box-shadow:inset 0 0 0 1px #ffffffd9,0 12px 28px color-mix(in srgb,var(--tile) 10%,transparent)}
+#vet-portal #vp-home .vp-tile:is(:hover,:focus-visible){background:linear-gradient(145deg,#fff 5%,color-mix(in srgb,var(--tile) 16%,#fff));box-shadow:inset 0 0 0 1px #fff,0 16px 32px color-mix(in srgb,var(--tile) 19%,transparent)}
+#vet-portal #vp-home .vp-tile::before,#vet-portal #vp-home .vp-tile::after{display:block}
+#vet-portal #vp-home .vp-home-arrow{border:0;padding-top:0;justify-content:flex-end;color:var(--tile-text)}
+#usg-focus .uf-exam-icon{width:64px;height:64px;border-radius:19px;color:var(--exam-accent)}
+#usg-focus .uf-exam-icon svg{width:40px;height:40px;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* One icon treatment across the homepage, examinations and calculators. */
+#vet-portal .vp-tile-top svg{width:60px;height:60px;padding:15px;border-radius:14px;border:1px solid #ffffffb3;background:color-mix(in srgb,var(--tile) 10%,#fff);color:var(--tile-text);stroke-width:1.5;box-shadow:0 6px 16px color-mix(in srgb,var(--tile) 7%,transparent)}
+#usg-focus .uf-exam-icon{display:grid;place-items:center;width:60px;height:60px;padding:0;border-radius:14px;border:1px solid #ffffffb3;background:color-mix(in srgb,var(--exam-accent) 10%,#fff);color:var(--exam-accent);box-shadow:0 6px 16px color-mix(in srgb,var(--exam-accent) 7%,transparent)}
+#usg-focus .uf-exam-icon svg{width:28px;height:28px;stroke-width:2}
+
+/* Calculator cards follow the examination-card composition. */
+.vp-calculator-grid{max-width:1100px;margin:auto;gap:18px}
+#vet-portal .vp-calculator-grid .vp-tile{align-items:flex-start;gap:0;min-height:350px;padding:26px 23px;border-radius:18px;text-align:left}
+#vet-portal .vp-calculator-grid .vp-tile::before{display:block;content:"";position:absolute;inset:0;height:auto;pointer-events:none;border-radius:inherit;background:linear-gradient(125deg,#ffffff8c,transparent 45%);box-shadow:inset 0 0 0 1px #bed6ec55}
+#vet-portal .vp-calculator-grid .vd-icon{margin-bottom:25px}
+.vp-calculator-kicker{font-size:10px;letter-spacing:1.4px;color:#5e5e6a;margin-bottom:9px}
+#vet-portal .vp-calculator-grid .vp-tile strong{font-size:23px;font-weight:600;letter-spacing:-.5px;line-height:1.35;margin-bottom:15px}
+#vet-portal .vp-calculator-grid .vp-desc{font-size:12px;line-height:1.8;margin-bottom:26px}
+#vet-portal .vp-calculator-grid .vp-tile-bottom{width:100%;align-items:center;font-size:12px;padding-top:15px}
+#vet-portal .vp-calculator-grid .vp-tile-bottom>span{display:inline;width:auto;height:auto;border-radius:0;background:none;font-size:20px}
+@media(max-width:650px){#vet-portal .vp-calculator-grid .vp-tile{padding:22px;min-height:320px}#vet-portal .vp-calculator-grid .vp-desc{margin-bottom:15px}}
+
+/* Use the same frame in every state for examination and calculator cards. */
+#usg-focus .uf-exam-card,
+#vet-portal .vp-calculator-grid .vp-tile{
+ border:1px solid rgba(255,255,255,.93);
+ border-radius:18px;
+ background:linear-gradient(135deg,#ffffff70,#ffffff25);
+ box-shadow:inset 0 1px 0 #fff,0 12px 28px #3529bf08;
+ transition:transform .18s,box-shadow .18s,border-color .18s,background .18s;
+}
+#usg-focus .uf-exam-card::before,
+#vet-portal .vp-calculator-grid .vp-tile::before{
+ content:"";display:block;position:absolute;inset:0;width:auto;height:auto;
+ border-radius:inherit;pointer-events:none;
+ background:linear-gradient(125deg,#ffffff8c,transparent 45%);
+ box-shadow:inset 0 0 0 1px #bed6ec55;
+}
+#usg-focus .uf-exam-card:is(:hover,:focus-visible),
+#vet-portal .vp-calculator-grid .vp-tile:is(:hover,:focus-visible){
+ border-color:#c1cce2;
+ background:linear-gradient(135deg,#ffffffa0,#ffffff50);
+ box-shadow:inset 0 1px 0 #fff,0 16px 32px #3529bf12;
+ transform:translateY(-4px);
+}
+#usg-focus .uf-exam-card:focus-visible,
+#vet-portal .vp-calculator-grid .vp-tile:focus-visible{outline:2px solid #aca5ff;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){#usg-focus .uf-exam-card,#vet-portal .vp-calculator-grid .vp-tile{transition:none}#usg-focus .uf-exam-card:is(:hover,:focus-visible),#vet-portal .vp-calculator-grid .vp-tile:is(:hover,:focus-visible){transform:none}}
+
+/* Inner cards keep a neutral glass surface and their own coloured frame. */
+#usg-focus .uf-exam-card{--card-accent:var(--exam-accent)}
+#vet-portal .vp-calculator-fat{--card-accent:#b65c23}
+#vet-portal .vp-calculator-fluid{--card-accent:#377db5}
+#usg-focus .uf-exam-card,
+#vet-portal .vp-calculator-grid .vp-tile{
+ border-color:color-mix(in srgb,var(--card-accent) 32%,#fff);
+ box-shadow:inset 0 1px 0 #fff,0 12px 28px color-mix(in srgb,var(--card-accent) 8%,transparent);
+}
+#usg-focus .uf-exam-card::before,
+#vet-portal .vp-calculator-grid .vp-tile::before{
+ box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--card-accent) 18%,transparent);
+}
+#usg-focus .uf-exam-card:is(:hover,:focus-visible),
+#vet-portal .vp-calculator-grid .vp-tile:is(:hover,:focus-visible){
+ border-color:color-mix(in srgb,var(--card-accent) 65%,#fff);
+ box-shadow:inset 0 1px 0 #fff,0 16px 32px color-mix(in srgb,var(--card-accent) 16%,transparent);
+}
+#usg-focus .uf-exam-card:focus-visible,
+#vet-portal .vp-calculator-grid .vp-tile:focus-visible{outline-color:var(--card-accent)}
+
+/* Inner tiles reveal only a coloured border on hover, without glow. */
+#usg-focus .uf-exam-card,
+#vet-portal .vp-calculator-grid .vp-tile{
+ border-color:rgba(255,255,255,.93);
+ box-shadow:none;
+ transition:border-color .18s;
+}
+#usg-focus .uf-exam-card::before,
+#vet-portal .vp-calculator-grid .vp-tile::before{box-shadow:none}
+#usg-focus .uf-exam-card:is(:hover,:focus-visible),
+#vet-portal .vp-calculator-grid .vp-tile:is(:hover,:focus-visible){
+ border-color:var(--card-accent);
+ box-shadow:none;
+ background:linear-gradient(135deg,#ffffff70,#ffffff25);
+ transform:none;
+}
+#usg-focus .uf-exam-card:focus-visible,
+#vet-portal .vp-calculator-grid .vp-tile:focus-visible{outline:none;border-color:var(--card-accent)}
