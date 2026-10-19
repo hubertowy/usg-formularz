@@ -19,8 +19,12 @@ entries.push(...(window.DermatologyDrugs||[]));
 entries.push(...(window.HumanDrugs||[]));
 entries.push(...(window.ThyroidDrugs||[]));
 entries.push(...(window.SteroidDrugs||[]));
+entries.push(...(window.AddedDrugs?.entries||[]));
+entries.push(...(window.ClinicalDrugs?.entries||[]));
 function parseWeight(raw){const s=String(raw).trim();if(!s)return {status:'empty'};if(!/^\d+(?:[.,]\d+)?$/.test(s))return {status:'invalid'};const kg=Number(s.replace(',','.'));return Number.isFinite(kg)&&kg>0?{status:'valid',kg}:{status:'invalid'};}
 function calculate(d,species,raw,schemeId,ageRaw){if(d.kind==='schemes')return calculateScheme(d,species,raw,schemeId,ageRaw);if(!d.species.includes(species))return {status:'species'};const p=parseWeight(raw);if(p.status!=='valid')return p;const kg=p.kg;
+if(d.kind==='clinicalDose')return window.ClinicalDrugs.calculate(d,kg,species,schemeId,ageRaw);
+if(d.kind==='labelDose')return window.AddedDrugs.calculate(d,kg,species,ageRaw);
 if(d.kind==='dailyTablets'){
  const mgRange=d.doseRange.map(rate=>kg*rate);
  const lo=Math.max(1,Math.ceil(mgRange[0]/d.mg*4-1e-10)),hi=Math.floor(mgRange[1]/d.mg*4+1e-10);
@@ -72,6 +76,7 @@ function calculateScheme(d,species,raw,schemeId,ageRaw){
  if(minAge&&ageRaw!=='adult'&&ageRaw!=='young'){const age=parseWeight(ageRaw??'');if(age.status!=='valid')return {status:'blocked',message:`Podaj wiek w tygodniach (minimum ${minAge}).`};if(age.kg<minAge)return {status:'blocked',message:`Przeciwwskazane poniżej ${minAge} tygodni życia.`};}
  if(scheme.fixedMl)return {status:'scheme',scheme,ml:scheme.fixedMl,amount:scheme.fixedMl.map(v=>v*d.concentration),unit:d.unit,fixed:true};
  const p=parseWeight(raw);if(p.status!=='valid')return p;
+ if(d.minimumSafeWeight&&p.kg<d.minimumSafeWeight)return {status:'blocked',message:`Bezpieczeństwo nieustalone poniżej ${String(d.minimumSafeWeight).replace('.',',')} kg — brak automatycznego wyliczenia.`};
  const minWeight=d.minWeightBySpecies?.[species]??d.minWeight;
  if(minWeight&&p.kg<minWeight)return {status:'blocked',message:`Przeciwwskazane przy masie poniżej ${minWeight} kg.`};
  const rates=Array.isArray(scheme.rate)?scheme.rate:[scheme.rate];
@@ -83,6 +88,7 @@ function calculateScheme(d,species,raw,schemeId,ageRaw){
 // Presentation groups preserve each verified calculation and its clinical context.
 function presentation(d,species){
  const schemes=d.regimens?.[species]||[];
+ if(d.kind==='clinicalDose')return schemes.map(r=>({id:r.id,label:r.label,items:[{schemeId:r.id,label:''}]}));
  const item=(id,label,more={})=>({schemeId:id,label,...more});
  if(!schemes.length)return [];
  if(d.id==='loxicom-cat')return [

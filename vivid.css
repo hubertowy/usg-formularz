@@ -43,3 +43,11 @@ body[data-panel=drugs]{--section-accent:#b64100;--section-soft:#fff0e5;--section
 #usg-focus .uf-home-intro p{font-size:14px;color:var(--v-muted);line-height:1.6}
 #usg-focus .uf-exam-grid{max-width:none}
 @media(max-width:760px){#usg-focus .uf-home{padding:30px 20px}#usg-focus .uf-home h1{font-size:28px}}
+
+/* Jedna spokojna obwódka wyszukiwarki, także przy obsłudze klawiaturą. */
+#vet-portal .vp-search-wrap:focus-within{outline:2px solid #aca5ff;outline-offset:2px;border-color:#bcb6e6;box-shadow:0 0 0 4px #aca5ff14}
+#vet-portal .vp-search-wrap input:focus,#vet-portal .vp-search-wrap input:focus-visible{outline:none;box-shadow:none}
+
+/* Spójny akcent pól masy i wyszukiwania. */
+#vet-portal #vp-weight:focus,#vet-portal #vp-weight:focus-visible{outline:2px solid #aca5ff;outline-offset:2px;border-color:#bcb6e6;box-shadow:0 0 0 4px #aca5ff14}
+#vet-portal .vp-search-wrap>span{color:#7365b5}
