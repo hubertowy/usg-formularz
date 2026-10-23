@@ -1,0 +1,1380 @@
+{
+  "source": "https://labwet.pl/wartosci-referencyjne/",
+  "tables": [
+    [
+      [
+        {
+          "span": 1,
+          "text": "WYSZCZEGÓLNIENIE"
+        },
+        {
+          "span": 1,
+          "text": "JEDNOSTKI"
+        },
+        {
+          "span": 1,
+          "text": "PIES"
+        },
+        {
+          "span": 1,
+          "text": "KOT"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Leukocyty"
+        },
+        {
+          "span": 1,
+          "text": "x10⁹/l (G/l)"
+        },
+        {
+          "span": 1,
+          "text": "6,0-12,0"
+        },
+        {
+          "span": 1,
+          "text": "6,0-18,0"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Erytrocyty"
+        },
+        {
+          "span": 1,
+          "text": "x10¹²/l (T/l)"
+        },
+        {
+          "span": 1,
+          "text": "5,5-8,0"
+        },
+        {
+          "span": 1,
+          "text": "6,5-10,0"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Hemoglobina"
+        },
+        {
+          "span": 1,
+          "text": "mmol/l"
+        },
+        {
+          "span": 1,
+          "text": "7,45-11,17"
+        },
+        {
+          "span": 1,
+          "text": "6,01-9,31"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Hematokryt"
+        },
+        {
+          "span": 1,
+          "text": "l/l"
+        },
+        {
+          "span": 1,
+          "text": "0,37-0,55"
+        },
+        {
+          "span": 1,
+          "text": "0,30-0,45"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "MCV"
+        },
+        {
+          "span": 1,
+          "text": "fl"
+        },
+        {
+          "span": 1,
+          "text": "60-77"
+        },
+        {
+          "span": 1,
+          "text": "39-55"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "MCH"
+        },
+        {
+          "span": 1,
+          "text": "fmol"
+        },
+        {
+          "span": 1,
+          "text": "1,19-1,49"
+        },
+        {
+          "span": 1,
+          "text": "0,81-1,05"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "MCHC"
+        },
+        {
+          "span": 1,
+          "text": "mmol/l"
+        },
+        {
+          "span": 1,
+          "text": "19,8-22,3"
+        },
+        {
+          "span": 1,
+          "text": "18,6-22,3"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "RDW"
+        },
+        {
+          "span": 1,
+          "text": "%"
+        },
+        {
+          "span": 1,
+          "text": "13-19"
+        },
+        {
+          "span": 1,
+          "text": "13-25"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Płytki krwi"
+        },
+        {
+          "span": 1,
+          "text": "x10⁹/l (G/l)"
+        },
+        {
+          "span": 1,
+          "text": "200-580"
+        },
+        {
+          "span": 1,
+          "text": "200-600"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "MPV"
+        },
+        {
+          "span": 1,
+          "text": "fl"
+        },
+        {
+          "span": 1,
+          "text": "6-9"
+        },
+        {
+          "span": 1,
+          "text": "13-18"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "OB opad krwinek"
+        },
+        {
+          "span": 1,
+          "text": "mm/h"
+        },
+        {
+          "span": 1,
+          "text": "1-6"
+        },
+        {
+          "span": 1,
+          "text": "2-8"
+        }
+      ]
+    ],
+    [
+      [
+        {
+          "span": 1,
+          "text": "WYSZCZEGÓLNIENIE"
+        },
+        {
+          "span": 1,
+          "text": "JEDNOSTKI"
+        },
+        {
+          "span": 1,
+          "text": "PIES"
+        },
+        {
+          "span": 1,
+          "text": "KOT"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Granulocyty:\nPałeczkowate"
+        },
+        {
+          "span": 1,
+          "text": "x10⁹/l (G/l)\n%"
+        },
+        {
+          "span": 1,
+          "text": "0-0,5\n0-3"
+        },
+        {
+          "span": 1,
+          "text": "0-0,57\n0-3"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Segmentowane"
+        },
+        {
+          "span": 1,
+          "text": "x10⁹/l (G/l)\n%"
+        },
+        {
+          "span": 1,
+          "text": "3,6-12,7\n60-77"
+        },
+        {
+          "span": 1,
+          "text": "1,93-14,25\n35-75"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Kwasochłonne"
+        },
+        {
+          "span": 1,
+          "text": "x10⁹/l (G/l)\n%"
+        },
+        {
+          "span": 1,
+          "text": "0,1-1,65\n2-10"
+        },
+        {
+          "span": 1,
+          "text": "0-2,28\n2-12"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Zasadochłonne"
+        },
+        {
+          "span": 1,
+          "text": "x10⁹/l (G/l)\n%"
+        },
+        {
+          "span": 1,
+          "text": "0-0\n0-0"
+        },
+        {
+          "span": 1,
+          "text": "0-0\n0-0"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Limfocyty"
+        },
+        {
+          "span": 1,
+          "text": "x10⁹/l (G/l)\n%"
+        },
+        {
+          "span": 1,
+          "text": "0,72-4,95\n12-30"
+        },
+        {
+          "span": 1,
+          "text": "1,1-10,45\n20-55"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Monocyty"
+        },
+        {
+          "span": 1,
+          "text": "x10⁹/l (G/l)\n%"
+        },
+        {
+          "span": 1,
+          "text": "0,18-1,65\n1-10"
+        },
+        {
+          "span": 1,
+          "text": "0,06-0,76\n1-4"
+        }
+      ]
+    ],
+    [
+      [
+        {
+          "span": 1,
+          "text": "WYSZCZEGÓLNIENIE"
+        },
+        {
+          "span": 1,
+          "text": "JEDNOSTKI"
+        },
+        {
+          "span": 1,
+          "text": "PIES"
+        },
+        {
+          "span": 1,
+          "text": "KOT"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Anizocytoza"
+        },
+        {
+          "span": 1,
+          "text": "—"
+        },
+        {
+          "span": 4,
+          "text": "prawidłowy - bez zmian\nnie stwierdzono"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Polichromazja"
+        },
+        {
+          "span": 1,
+          "text": "—"
+        },
+        {
+          "span": 4,
+          "text": "nie stwierdzono"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Poikilocytoza"
+        },
+        {
+          "span": 1,
+          "text": "—"
+        },
+        {
+          "span": 4,
+          "text": "nie stwierdzono"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Erytroblasty\n/100 leukocytów"
+        },
+        {
+          "span": 1,
+          "text": "—"
+        },
+        {
+          "span": 4,
+          "text": "normalnie nie występują we krwi obwodowej"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Retikulocyty"
+        },
+        {
+          "span": 1,
+          "text": "%"
+        },
+        {
+          "span": 1,
+          "text": "do 1,0"
+        },
+        {
+          "span": 1,
+          "text": "do 0,6"
+        }
+      ]
+    ],
+    [
+      [
+        {
+          "span": 1,
+          "text": "WYSZCZEGÓLNIENIE"
+        },
+        {
+          "span": 1,
+          "text": "JEDNOSTKI"
+        },
+        {
+          "span": 1,
+          "text": "PIES"
+        },
+        {
+          "span": 1,
+          "text": "KOT"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "PT czas protrombinowy"
+        },
+        {
+          "span": 1,
+          "text": "sek"
+        },
+        {
+          "span": 1,
+          "text": "7-14"
+        },
+        {
+          "span": 1,
+          "text": "7-12"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "APTT czas\nkaolinowo - kefalinowy"
+        },
+        {
+          "span": 1,
+          "text": "sek"
+        },
+        {
+          "span": 1,
+          "text": "do 21"
+        },
+        {
+          "span": 1,
+          "text": "do 19"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Fibrynogen"
+        },
+        {
+          "span": 1,
+          "text": "mg/dl"
+        },
+        {
+          "span": 1,
+          "text": "100-500"
+        },
+        {
+          "span": 1,
+          "text": "50-300"
+        }
+      ]
+    ],
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+      [
+        {
+          "span": 1,
+          "text": "WYSZCZEGÓLNIENIE"
+        },
+        {
+          "span": 1,
+          "text": "JEDNOSTKI"
+        },
+        {
+          "span": 1,
+          "text": "PIES"
+        },
+        {
+          "span": 1,
+          "text": "KOT"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "AST"
+        },
+        {
+          "span": 1,
+          "text": "U/l"
+        },
+        {
+          "span": 1,
+          "text": "3-45"
+        },
+        {
+          "span": 1,
+          "text": "3-44"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "ALT"
+        },
+        {
+          "span": 1,
+          "text": "U/l"
+        },
+        {
+          "span": 1,
+          "text": "5-60"
+        },
+        {
+          "span": 1,
+          "text": "10-107"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "AP"
+        },
+        {
+          "span": 1,
+          "text": "U/l"
+        },
+        {
+          "span": 1,
+          "text": "5-155"
+        },
+        {
+          "span": 1,
+          "text": "7-107"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Glukoza"
+        },
+        {
+          "span": 1,
+          "text": "mg/dl"
+        },
+        {
+          "span": 1,
+          "text": "70-120"
+        },
+        {
+          "span": 1,
+          "text": "100-130"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Kreatynina"
+        },
+        {
+          "span": 1,
+          "text": "mg/dl"
+        },
+        {
+          "span": 1,
+          "text": "0,8-1,7"
+        },
+        {
+          "span": 1,
+          "text": "1,0-2,0"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Mocznik"
+        },
+        {
+          "span": 1,
+          "text": "mg/dl"
+        },
+        {
+          "span": 1,
+          "text": "20-50"
+        },
+        {
+          "span": 1,
+          "text": "25-70"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Białko całkowite"
+        },
+        {
+          "span": 1,
+          "text": "g/l"
+        },
+        {
+          "span": 1,
+          "text": "55-75"
+        },
+        {
+          "span": 1,
+          "text": "60-80"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Bilirubina całkowita"
+        },
+        {
+          "span": 1,
+          "text": "mg/dl"
+        },
+        {
+          "span": 1,
+          "text": "0,2-0,9"
+        },
+        {
+          "span": 1,
+          "text": "0,2-1,2"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Albuminy"
+        },
+        {
+          "span": 1,
+          "text": "g/l"
+        },
+        {
+          "span": 1,
+          "text": "29-43"
+        },
+        {
+          "span": 1,
+          "text": "27-39"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "GGT"
+        },
+        {
+          "span": 1,
+          "text": "U/l"
+        },
+        {
+          "span": 1,
+          "text": "5-25"
+        },
+        {
+          "span": 1,
+          "text": "0-10"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "GLDH"
+        },
+        {
+          "span": 1,
+          "text": "U/l"
+        },
+        {
+          "span": 1,
+          "text": "0-11"
+        },
+        {
+          "span": 1,
+          "text": "0-11"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Wapń"
+        },
+        {
+          "span": 1,
+          "text": "mg/dl"
+        },
+        {
+          "span": 1,
+          "text": "8,4-11,5"
+        },
+        {
+          "span": 1,
+          "text": "8,0-11,1"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Fosfor"
+        },
+        {
+          "span": 1,
+          "text": "mg/dl"
+        },
+        {
+          "span": 1,
+          "text": "2,5-5,9"
+        },
+        {
+          "span": 1,
+          "text": "3,0-6,8"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Magnez"
+        },
+        {
+          "span": 1,
+          "text": "mg/dl"
+        },
+        {
+          "span": 1,
+          "text": "1,7-2,9"
+        },
+        {
+          "span": 1,
+          "text": "2,1-3,2"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Cholesterol całk."
+        },
+        {
+          "span": 1,
+          "text": "mg/dl"
+        },
+        {
+          "span": 1,
+          "text": "128-360"
+        },
+        {
+          "span": 1,
+          "text": "77-201"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "LDH"
+        },
+        {
+          "span": 1,
+          "text": "U/l"
+        },
+        {
+          "span": 1,
+          "text": "80-1683"
+        },
+        {
+          "span": 1,
+          "text": "120-1051"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "CK"
+        },
+        {
+          "span": 1,
+          "text": "U/l"
+        },
+        {
+          "span": 1,
+          "text": "5-467"
+        },
+        {
+          "span": 1,
+          "text": "49-688"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Trójglicerydy"
+        },
+        {
+          "span": 1,
+          "text": "mg/dl"
+        },
+        {
+          "span": 1,
+          "text": "18-115"
+        },
+        {
+          "span": 1,
+          "text": "18-159"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Sód"
+        },
+        {
+          "span": 1,
+          "text": "mmol/l"
+        },
+        {
+          "span": 1,
+          "text": "139,1-156,5"
+        },
+        {
+          "span": 1,
+          "text": "143,3-156,5"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Potas"
+        },
+        {
+          "span": 1,
+          "text": "mmol/l"
+        },
+        {
+          "span": 1,
+          "text": "4,1-5,4"
+        },
+        {
+          "span": 1,
+          "text": "4,1-5,6"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Chlorki"
+        },
+        {
+          "span": 1,
+          "text": "mmol/l"
+        },
+        {
+          "span": 1,
+          "text": "98,7-120,6"
+        },
+        {
+          "span": 1,
+          "text": "101,5-123,4"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Globuliny"
+        },
+        {
+          "span": 1,
+          "text": "g/l"
+        },
+        {
+          "span": 1,
+          "text": "28-42"
+        },
+        {
+          "span": 1,
+          "text": "27-45"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Amylaza"
+        },
+        {
+          "span": 1,
+          "text": "U/l"
+        },
+        {
+          "span": 1,
+          "text": "300-1800"
+        },
+        {
+          "span": 1,
+          "text": "433-1600"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Lipaza"
+        },
+        {
+          "span": 1,
+          "text": "U/l"
+        },
+        {
+          "span": 1,
+          "text": "0-135"
+        },
+        {
+          "span": 1,
+          "text": "0-45"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Fruktozamina"
+        },
+        {
+          "span": 1,
+          "text": "μmol/l"
+        },
+        {
+          "span": 1,
+          "text": "225-365"
+        },
+        {
+          "span": 1,
+          "text": "190-365"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Miedź"
+        },
+        {
+          "span": 1,
+          "text": "μg/dl"
+        },
+        {
+          "span": 1,
+          "text": "20-80"
+        },
+        {
+          "span": 1,
+          "text": "60-140"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Cynk"
+        },
+        {
+          "span": 1,
+          "text": "μg/dl"
+        },
+        {
+          "span": 1,
+          "text": "70-100"
+        },
+        {
+          "span": 1,
+          "text": "54-96"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Żelazo"
+        },
+        {
+          "span": 1,
+          "text": "μmol/l"
+        },
+        {
+          "span": 1,
+          "text": "16,8-29,8"
+        },
+        {
+          "span": 1,
+          "text": "12,2-38,5"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Kwas moczowy"
+        },
+        {
+          "span": 1,
+          "text": "mg/dl"
+        },
+        {
+          "span": 1,
+          "text": "0,2-0,9"
+        },
+        {
+          "span": 1,
+          "text": "0,0-1,9"
+        }
+      ]
+    ],
+    [
+      [
+        {
+          "span": 1,
+          "text": "WYSZCZEGÓLNIENIE"
+        },
+        {
+          "span": 1,
+          "text": "JEDNOSTKI"
+        },
+        {
+          "span": 1,
+          "text": "PIES"
+        },
+        {
+          "span": 1,
+          "text": "KOT"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "T3"
+        },
+        {
+          "span": 1,
+          "text": "ng/dl"
+        },
+        {
+          "span": 1,
+          "text": "50-160"
+        },
+        {
+          "span": 1,
+          "text": "75-150"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "T4"
+        },
+        {
+          "span": 1,
+          "text": "ng/ml"
+        },
+        {
+          "span": 1,
+          "text": "15-40"
+        },
+        {
+          "span": 1,
+          "text": "10-30"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "fT3"
+        },
+        {
+          "span": 1,
+          "text": "pg/ml"
+        },
+        {
+          "span": 1,
+          "text": "1,8-2,5"
+        },
+        {
+          "span": 1,
+          "text": "1,8-2,5"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "fT4"
+        },
+        {
+          "span": 1,
+          "text": "ng/dl"
+        },
+        {
+          "span": 1,
+          "text": "1-4"
+        },
+        {
+          "span": 1,
+          "text": "1-3"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "TSH"
+        },
+        {
+          "span": 1,
+          "text": "ng/ml"
+        },
+        {
+          "span": 1,
+          "text": "0,03-0,8"
+        },
+        {
+          "span": 1,
+          "text": "0,03-0,32"
+        }
+      ]
+    ],
+    [
+      [
+        {
+          "span": 1,
+          "text": "WYSZCZEGÓLNIENIE"
+        },
+        {
+          "span": 1,
+          "text": "JEDNOSTKI"
+        },
+        {
+          "span": 1,
+          "text": "PIES"
+        },
+        {
+          "span": 1,
+          "text": "KOT"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Kortyzol"
+        },
+        {
+          "span": 1,
+          "text": "nmol/l"
+        },
+        {
+          "span": 1,
+          "text": "27,6-165,5"
+        },
+        {
+          "span": 1,
+          "text": "27,6-137,9"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Luminal"
+        },
+        {
+          "span": 1,
+          "text": "μg/ml"
+        },
+        {
+          "span": 1,
+          "text": "15,0-45,0"
+        },
+        {
+          "span": 1,
+          "text": "15-45"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Insulina"
+        },
+        {
+          "span": 1,
+          "text": "μIU/ml"
+        },
+        {
+          "span": 1,
+          "text": "15-20"
+        },
+        {
+          "span": 1,
+          "text": "15-20"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Estradiol [samiec]"
+        },
+        {
+          "span": 1,
+          "text": "pg/ml"
+        },
+        {
+          "span": 1,
+          "text": "0,5-5,0"
+        },
+        {
+          "span": 1,
+          "text": "0,5-5,0"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Estradiol [samica]"
+        },
+        {
+          "span": 1,
+          "text": "pg/ml"
+        },
+        {
+          "span": 1,
+          "text": "15,0-60,0"
+        },
+        {
+          "span": 1,
+          "text": "15,0-60,0"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Testosteron [samiec]"
+        },
+        {
+          "span": 1,
+          "text": "ng/ml"
+        },
+        {
+          "span": 1,
+          "text": "0,5-6,0"
+        },
+        {
+          "span": 1,
+          "text": "0,5-6,0"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Testosteron [samica]"
+        },
+        {
+          "span": 1,
+          "text": "ng/ml"
+        },
+        {
+          "span": 1,
+          "text": "<0,5"
+        },
+        {
+          "span": 1,
+          "text": "<0,5"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Parathormon"
+        },
+        {
+          "span": 1,
+          "text": "pg/ml"
+        },
+        {
+          "span": 1,
+          "text": "9,1-59,0"
+        },
+        {
+          "span": 1,
+          "text": "4,54-18,6"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "Witamina B12"
+        },
+        {
+          "span": 1,
+          "text": "pmol/l"
+        },
+        {
+          "span": 1,
+          "text": "155-362"
+        },
+        {
+          "span": 1,
+          "text": "177-885"
+        }
+      ],
+      [
+        {
+          "span": 1,
+          "text": "TLI"
+        },
+        {
+          "span": 1,
+          "text": "ng/ml"
+        },
+        {
+          "span": 1,
+          "text": "5-35"
+        },
+        {
+          "span": 1,
+          "text": "—"
+        }
+      ]
+    ],
+    null,
+    null,
+    null
+  ]
+}

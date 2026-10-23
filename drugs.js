@@ -15,6 +15,7 @@ entries.push({id:'rapidexon-2',name:'Rapidexon',library:'vet',kind:'injection',s
 entries.push(...(window.ExtraDrugs||[]));
 entries.push(...[20,60,100].map(mg=>({id:'galliprant-'+mg,name:'Galliprant',kind:'tabletBands',library:'vet',species:['dog'],strength:mg+' mg',mg,substance:'grapiprant',checked:'14.10.2026',source:'https://www.uskvbl.cz/attachments/spc/0910f7c7806dc93d.pdf',bands:mg===20?[[3.6,6.8,.5],[6.9,13.6,1]]:mg===60?[[13.7,20.4,.5],[20.5,34,1]]:[[34.1,68,1],[68.1,100,2]],ageNotice:'Bezpieczeństwo nieustalone poniżej 9 miesięcy.',indications:'Ból związany z łagodną lub umiarkowaną osteoartrozą u psów.',notes:'Doustnie raz na dobę, na czczo, co najmniej godzinę przed posiłkiem. Dawka docelowa 2 mg/kg; liczba tabletek według przedziałów ChPLW. Tabletki 20 i 60 mg podzielne na połowy; 100 mg bez podziału. Bez poprawy po 14 dniach przerwać leczenie i ocenić inne możliwości.',cautions:'Nie stosować u ciężarnych, karmiących ani zwierząt hodowlanych. Unikać łączenia z innymi lekami przeciwzapalnymi. Ostrożność przy chorobach nerek, wątroby, serca i żołądka. Bezpieczeństwo nieustalone poniżej 9 miesięcy i 3,6 kg.'})));
 entries.push(...(window.VetSupplements||[]));
+entries.push(...(window.RenalSupplements||[]));
 entries.push(...(window.Ilovet?.entries||[]));
 entries.push(...(window.DermatologyDrugs||[]));
 entries.push(...(window.HumanDrugs||[]));
@@ -24,7 +25,7 @@ entries.push(...(window.AddedDrugs?.entries||[]));
 entries.push(...(window.ClinicalDrugs?.entries||[]));
 entries.push(...(window.ExpandedDrugs?.entries||[]));
 function parseWeight(raw){const s=String(raw).trim();if(!s)return {status:'empty'};if(!/^\d+(?:[.,]\d+)?$/.test(s))return {status:'invalid'};const kg=Number(s.replace(',','.'));return Number.isFinite(kg)&&kg>0?{status:'valid',kg}:{status:'invalid'};}
-function calculate(d,species,raw,schemeId,ageRaw){if(d.kind==='schemes')return calculateScheme(d,species,raw,schemeId,ageRaw);if(!d.species.includes(species))return {status:'species'};if(d.kind==='ilovet'&&d.topical)return window.Ilovet.calculate(d,null,species);
+function calculate(d,species,raw,schemeId,ageRaw){if(d.kind==='schemes')return calculateScheme(d,species,raw,schemeId,ageRaw);if(!d.species.includes(species))return {status:'species'};if(d.kind==='fixedSupplement')return {status:'fixedSupplement',amount:d.dailyAmount,unit:d.dailyUnit};if(d.kind==='ilovet'&&d.topical)return window.Ilovet.calculate(d,null,species);
 const p=parseWeight(raw);if(p.status!=='valid')return p;const kg=p.kg;
 if(d.kind==='ilovet')return window.Ilovet.calculate(d,kg,species);
 if(d.kind==='expandedDose')return window.ExpandedDrugs.calculate(d,kg,species);

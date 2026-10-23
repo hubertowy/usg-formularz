@@ -1,5 +1,5 @@
 const vm=require('node:vm'),fs=require('node:fs'),assert=require('node:assert/strict');const path=require('node:path');const root=path.resolve(__dirname,'..');global.window=global;
-for(const file of ['extra-drugs.js','supplements.js','dermatology.js','human-drugs.js','thyroid-drugs.js','steroid-drugs.js','added-drugs.js','clinical-drugs.js','ilovet.js','expanded-drugs.js','drugs.js'])vm.runInThisContext(fs.readFileSync(path.join(root,file),'utf8'),{filename:file});
+for(const file of ['extra-drugs.js','supplements.js','renal-supplements.js','dermatology.js','human-drugs.js','thyroid-drugs.js','steroid-drugs.js','added-drugs.js','clinical-drugs.js','ilovet.js','expanded-drugs.js','drugs.js'])vm.runInThisContext(fs.readFileSync(path.join(root,file),'utf8'),{filename:file});
 const entry=key=>Ilovet.entries.find(d=>d.id==='ilovet-'+key);
 const calc=(key,kg,s='dog')=>VetDrugs.calculate(entry(key),s,String(kg));
 assert.equal(Ilovet.entries.length,53);assert.equal(new Set(Ilovet.entries.map(e=>e.id)).size,53);assert.equal(new Set(Ilovet.entries.map(e=>e.name)).size,53);
@@ -70,3 +70,26 @@ a.ok(Math.abs(c('rheumocam-tablets',11.2).stages[0].mg-2.24)<1e-9);
 a.deepEqual(c('levogland-200',11.2).proposals.map(p=>p.tablets),[1.25,.75]);
 a.deepEqual(c('levogland-200',11.2).proposals.map(p=>p.ug),[250,150]);
 a.equal(c('forthyron-200',13).proposal.tablets,.75);
+
+// Dechra renal products have fixed daily portions per cat, not weight-based drug doses.
+for(const id of ['dechra-porus-one','dechra-catney-one']){
+ for(const w of ['', '2', '5', '10']){const r=VetDrugs.calculate(get(id),'cat',w);a.equal(r.status,'fixedSupplement');a.equal(r.amount,1);a.equal(r.unit,'saszetka');}
+ a.equal(VetDrugs.calculate(get(id),'dog','5').status,'species');
+ a.equal(get(id).library,'supplement');
+}
+a.equal(VetDrugs.search('Dechra','supplement','cat').length,2);
+
+// Thiamacare: fixed starting dose per cat, not per kg; two administrations per day.
+const thiamacare=get('thiamacare-10');
+a.equal(thiamacare.concentration,10);
+for(const weight of ['', '2', '5', '10']) {
+ const dose=VetDrugs.calculate(thiamacare,'cat',weight,'initial');
+ a.equal(dose.status,'scheme');a.equal(dose.fixed,true);
+ a.deepEqual(dose.ml,[.25]);a.deepEqual(dose.amount,[2.5]);
+ a.equal(dose.ml[0]*2,.5);a.equal(dose.amount[0]*2,5);
+}
+a.equal(VetDrugs.calculate(thiamacare,'dog','5','initial').status,'species');
+a.equal(VetDrugs.search('Thiamacare','vet','cat').length,1);
+a.equal(VetDrugs.search('Thiamacare','vet','dog').length,0);
+a.equal(VetDrugs.presentation(thiamacare,'cat').length,1);
+console.log('Thiamacare: feline fixed initial dose, concentration, daily totals and search verified.');
